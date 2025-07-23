@@ -1,0 +1,150 @@
+
+FAIRNESS PRE-CHECK REPORT
+=========================
+Dataset shape: (101766, 22)
+Target column: readmit_30_days
+Sensitive features: ['race', 'gender', 'age', 'medicare', 'medicaid']
+
+Overall readmission rate (<30 days): 0.1116
+
+READMISSION RATES BY GROUP
+==========================
+
+--- RACE ---
+                 count  readmit_rate
+race                                
+AfricanAmerican  19210      0.112181
+Asian              641      0.101404
+Caucasian        76099      0.112906
+Hispanic          2037      0.104075
+Other             1506      0.096282
+Unknown           2273      0.082710
+
+--- GENDER ---
+                 count  readmit_rate
+gender                              
+Female           54708      0.112452
+Male             47055      0.110615
+Unknown/Invalid      3      0.000000
+
+--- AGE ---
+                     count  readmit_rate
+age                                     
+30 years or younger   2509      0.111200
+30-60 years          30716      0.101543
+Over 60 years        68541      0.116120
+
+--- MEDICARE ---
+          count  readmit_rate
+medicare                     
+False     69327      0.108861
+True      32439      0.117451
+
+--- MEDICAID ---
+          count  readmit_rate
+medicaid                     
+False     98234      0.111377
+True       3532      0.117780
+
+MISSINGNESS BY GROUP
+====================
+
+--- A1CRESULT ---
+
+Missing A1Cresult by race:
+race
+AfricanAmerican    0.817283
+Asian              0.789392
+Caucasian          0.840274
+Hispanic           0.758959
+Other              0.797477
+Unknown            0.814342
+Name: A1Cresult, dtype: float64
+
+Missing A1Cresult by gender:
+gender
+Female             0.839566
+Male               0.824865
+Unknown/Invalid    1.000000
+Name: A1Cresult, dtype: float64
+
+Missing A1Cresult by age:
+age
+30 years or younger    0.644878
+30-60 years            0.789198
+Over 60 years          0.859179
+Name: A1Cresult, dtype: float64
+
+Missing A1Cresult by medicare:
+medicare
+False    0.818022
+True     0.864299
+Name: A1Cresult, dtype: float64
+
+Missing A1Cresult by medicaid:
+medicaid
+False    0.834141
+True     0.794734
+Name: A1Cresult, dtype: float64
+
+--- MAX_GLU_SERUM ---
+
+Missing max_glu_serum by race:
+race
+AfricanAmerican    0.976158
+Asian              0.959438
+Caucasian          0.940209
+Hispanic           0.908689
+Other              0.953519
+Unknown            0.975363
+Name: max_glu_serum, dtype: float64
+
+Missing max_glu_serum by gender:
+gender
+Female             0.947010
+Male               0.947997
+Unknown/Invalid    1.000000
+Name: max_glu_serum, dtype: float64
+
+Missing max_glu_serum by age:
+age
+30 years or younger    0.966919
+30-60 years            0.954747
+Over 60 years          0.943494
+Name: max_glu_serum, dtype: float64
+
+Missing max_glu_serum by medicare:
+medicare
+False    0.941192
+True     0.960880
+Name: max_glu_serum, dtype: float64
+
+Missing max_glu_serum by medicaid:
+medicaid
+False    0.946251
+True     0.981314
+Name: max_glu_serum, dtype: float64
+
+DISPARITY RATIOS (min / max readmit rate)
+=========================================
+race: 0.7326
+gender: 0.0000
+age: 0.8745
+medicare: 0.9269
+medicaid: 0.9456
+
+SMALL GROUPS (count < 100)
+==========================
+
+race: No small groups
+
+gender:
+gender
+Unknown/Invalid    3
+Name: count, dtype: int64
+
+age: No small groups
+
+medicare: No small groups
+
+medicaid: No small groups
