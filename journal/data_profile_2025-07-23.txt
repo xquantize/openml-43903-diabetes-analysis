@@ -1,0 +1,223 @@
+DATA QUALITY REPORT
+Generated on: 2025-07-23
+
+BASIC STRUCTURE
+Shape: (101766, 22)
+Columns: ['race', 'gender', 'age', 'admission_source_id', 'time_in_hospital', 'medical_specialty', 'num_lab_procedures', 'num_procedures', 'num_medications', 'primary_diagnosis', 'number_diagnoses', 'max_glu_serum', 'A1Cresult', 'insulin', 'change', 'diabetesMed', 'medicare', 'medicaid', 'had_emergency', 'had_inpatient_days', 'had_outpatient_days', 'readmit_30_days']
+
+DATA TYPES
+race                   object
+gender                 object
+age                    object
+admission_source_id    object
+time_in_hospital        int64
+medical_specialty      object
+num_lab_procedures      int64
+num_procedures          int64
+num_medications         int64
+primary_diagnosis      object
+number_diagnoses        int64
+max_glu_serum          object
+A1Cresult              object
+insulin                object
+change                 object
+diabetesMed            object
+medicare                 bool
+medicaid                 bool
+had_emergency            bool
+had_inpatient_days       bool
+had_outpatient_days      bool
+readmit_30_days         int64
+dtype: object
+
+MISSING VALUES
+               missing_count  missing_percent
+max_glu_serum          96420        94.746772
+A1Cresult              84748        83.277322
+
+DUPLICATE ROWS
+24 duplicate rows found.
+
+UNIQUE VALUES PER COLUMN
+race                     6
+gender                   3
+age                      3
+admission_source_id      3
+time_in_hospital        14
+medical_specialty        6
+num_lab_procedures     118
+num_procedures           7
+num_medications         75
+primary_diagnosis        5
+number_diagnoses        16
+max_glu_serum            3
+A1Cresult                3
+insulin                  4
+change                   2
+diabetesMed              2
+medicare                 2
+medicaid                 2
+had_emergency            2
+had_inpatient_days       2
+had_outpatient_days      2
+readmit_30_days          2
+dtype: int64
+
+NUMERICAL DESCRIPTIVE STATISTICS
+                       count       mean        std  min   25%   50%   75%    max
+time_in_hospital    101766.0   4.395987   2.985108  1.0   2.0   4.0   6.0   14.0
+num_lab_procedures  101766.0  43.095641  19.674362  1.0  31.0  44.0  57.0  132.0
+num_procedures      101766.0   1.339730   1.705807  0.0   0.0   1.0   2.0    6.0
+num_medications     101766.0  16.021844   8.127566  1.0  10.0  15.0  20.0   81.0
+number_diagnoses    101766.0   7.422607   1.933600  1.0   6.0   8.0   9.0   16.0
+readmit_30_days     101766.0   0.111599   0.314874  0.0   0.0   0.0   0.0    1.0
+
+HIGH CARDINALITY CATEGORICAL FEATURES
+No high cardinality object features found.
+
+TARGET DISTRIBUTION: readmit_30_days
+readmit_30_days
+0    90409
+1    11357
+Name: count, dtype: int64
+Imbalance ratio (minority/majority): 0.1256
+
+CONSTANT FEATURES
+No constant features found.
+
+POTENTIAL OUTLIERS (NUMERICAL RANGES)
+time_in_hospital: 2252 outliers
+num_lab_procedures: 143 outliers
+num_procedures: 4954 outliers
+num_medications: 2557 outliers
+number_diagnoses: 281 outliers
+readmit_30_days: 11357 outliers
+
+CATEGORICAL SUMMARY: race
+race
+Caucasian          76099
+AfricanAmerican    19210
+Unknown             2273
+Hispanic            2037
+Other               1506
+Asian                641
+Name: count, dtype: int64
+
+CATEGORICAL SUMMARY: gender
+gender
+Female             54708
+Male               47055
+Unknown/Invalid        3
+Name: count, dtype: int64
+
+CATEGORICAL SUMMARY: age
+age
+Over 60 years          68541
+30-60 years            30716
+30 years or younger     2509
+Name: count, dtype: int64
+
+CATEGORICAL SUMMARY: admission_source_id
+admission_source_id
+Emergency    57494
+Referral     30856
+Other        13416
+Name: count, dtype: int64
+
+CATEGORICAL SUMMARY: medical_specialty
+medical_specialty
+Missing                   49949
+Other                     16825
+InternalMedicine          14635
+Emergency/Trauma           7565
+Family/GeneralPractice     7440
+Cardiology                 5352
+Name: count, dtype: int64
+
+CATEGORICAL SUMMARY: primary_diagnosis
+primary_diagnosis
+Other                     68512
+Respiratory Issues        14423
+Diabetes                   8757
+Genitourinary Issues       5117
+Musculoskeletal Issues     4957
+Name: count, dtype: int64
+
+CATEGORICAL SUMMARY: max_glu_serum
+max_glu_serum
+NaN     96420
+Norm     2597
+>200     1485
+>300     1264
+Name: count, dtype: int64
+
+CATEGORICAL SUMMARY: A1Cresult
+A1Cresult
+NaN     84748
+>8       8216
+Norm     4990
+>7       3812
+Name: count, dtype: int64
+
+CATEGORICAL SUMMARY: insulin
+insulin
+No        47383
+Steady    30849
+Down      12218
+Up        11316
+Name: count, dtype: int64
+
+CATEGORICAL SUMMARY: change
+change
+No    54755
+Ch    47011
+Name: count, dtype: int64
+
+CATEGORICAL SUMMARY: diabetesMed
+diabetesMed
+Yes    78363
+No     23403
+Name: count, dtype: int64
+
+BOOLEAN SUMMARY: medicare
+medicare
+False    69327
+True     32439
+Name: count, dtype: int64
+
+BOOLEAN SUMMARY: medicaid
+medicaid
+False    98234
+True      3532
+Name: count, dtype: int64
+
+BOOLEAN SUMMARY: had_emergency
+had_emergency
+False    90383
+True     11383
+Name: count, dtype: int64
+
+BOOLEAN SUMMARY: had_inpatient_days
+had_inpatient_days
+False    67630
+True     34136
+Name: count, dtype: int64
+
+BOOLEAN SUMMARY: had_outpatient_days
+had_outpatient_days
+False    85027
+True     16739
+Name: count, dtype: int64
+
+
+POSSIBLE DIRTY VALUES DETECTED IN: race
+POSSIBLE DIRTY VALUES DETECTED IN: gender
+POSSIBLE DIRTY VALUES DETECTED IN: medical_specialty
+
+CORRELATION MATRIX (Top 5 strongest non-1.0 pairs)
+time_in_hospital    num_medications     0.466135
+num_medications     time_in_hospital    0.466135
+                    num_procedures      0.385767
+num_procedures      num_medications     0.385767
+num_lab_procedures  time_in_hospital    0.318450
+dtype: float64
