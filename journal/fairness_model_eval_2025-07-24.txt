@@ -1,0 +1,89 @@
+OVERALL METRICS
+Accuracy: 0.8870
+Precision: 0.2500
+Recall: 0.0062
+F1: 0.0120
+ROC-AUC: 0.5944
+Brier Score: 0.1001
+
+METRIC BREAKDOWN BY RACE
+----------------------------------------
+Sample counts by race: {'Caucasian': 15223, 'AfricanAmerican': 3866, 'Unknown': 462, 'Hispanic': 404, 'Other': 276, 'Asian': 123}
+Positive class rate by race: {'AfricanAmerican': 0.1117, 'Asian': 0.0813, 'Caucasian': 0.1128, 'Hispanic': 0.1238, 'Other': 0.0725, 'Unknown': 0.0909}
+                 accuracy  precision    recall        f1
+race                                                    
+AfricanAmerican  0.887739   0.400000  0.009259  0.018100
+Asian            0.918699   0.000000  0.000000  0.000000
+Caucasian        0.885502   0.217391  0.005824  0.011344
+Hispanic         0.876238   0.000000  0.000000  0.000000
+Other            0.927536   0.000000  0.000000  0.000000
+Unknown          0.909091   0.000000  0.000000  0.000000
+
+Disparity (min/max accuracy): 0.9447
+Worst-performing group (accuracy): Hispanic = 0.8762
+Best-performing group (accuracy): Other = 0.9275
+Demographic Parity Difference (race): 0.0030
+Equalized Odds Difference (race): 0.0093
+
+METRIC BREAKDOWN BY GENDER
+----------------------------------------
+Sample counts by gender: {'Female': 10924, 'Male': 9430}
+Positive class rate by gender: {'Female': 0.1149, 'Male': 0.1077}
+        accuracy  precision    recall        f1
+gender                                         
+Female  0.883742   0.173913  0.003187  0.006260
+Male    0.890880   0.303030  0.009843  0.019066
+
+Disparity (min/max accuracy): 0.9920
+Worst-performing group (accuracy): Female = 0.8837
+Best-performing group (accuracy): Male = 0.8909
+Demographic Parity Difference (gender): 0.0014
+Equalized Odds Difference (gender): 0.0067
+
+METRIC BREAKDOWN BY AGE
+----------------------------------------
+Sample counts by age: {'Over 60 years': 13771, '30-60 years': 6095, '30 years or younger': 488}
+Positive class rate by age: {'30 years or younger': 0.1004, '30-60 years': 0.093, 'Over 60 years': 0.1202}
+                     accuracy  precision    recall        f1
+age                                                         
+30 years or younger  0.893443   0.285714  0.040816  0.071429
+30-60 years          0.906645   0.444444  0.014109  0.027350
+Over 60 years        0.878150   0.129032  0.002417  0.004745
+
+Disparity (min/max accuracy): 0.9686
+Worst-performing group (accuracy): Over 60 years = 0.8781
+Best-performing group (accuracy): 30-60 years = 0.9066
+Demographic Parity Difference (age): 0.0121
+Equalized Odds Difference (age): 0.0384
+
+METRIC BREAKDOWN BY MEDICARE
+----------------------------------------
+Sample counts by medicare: {False: 13825, True: 6529}
+Positive class rate by medicare: {False: 0.1065, True: 0.1224}
+          accuracy  precision    recall        f1
+medicare                                         
+False     0.892586   0.259259  0.004755  0.009340
+True      0.875325   0.241379  0.008761  0.016908
+
+Disparity (min/max accuracy): 0.9807
+Worst-performing group (accuracy): True = 0.8753
+Best-performing group (accuracy): False = 0.8926
+Demographic Parity Difference (medicare): 0.0025
+Equalized Odds Difference (medicare): 0.0040
+
+METRIC BREAKDOWN BY MEDICAID
+----------------------------------------
+Sample counts by medicaid: {False: 19676, True: 678}
+Positive class rate by medicaid: {False: 0.1117, True: 0.1077}
+          accuracy  precision    recall        f1
+medicaid                                         
+False     0.886969   0.259259  0.006369  0.012433
+True      0.889381   0.000000  0.000000  0.000000
+
+Disparity (min/max accuracy): 0.9973
+Worst-performing group (accuracy): False = 0.8870
+Best-performing group (accuracy): True = 0.8894
+Demographic Parity Difference (medicaid): 0.0002
+Equalized Odds Difference (medicaid): 0.0064
+
+Calibration curve saved to: journal/plots/calibration_curve.png
