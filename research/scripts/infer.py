@@ -13,7 +13,7 @@ from sklearn.metrics import roc_auc_score, accuracy_score, classification_report
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../../')))
 
 from data.dataloader import MedicalDataset
-from research.models.transformer import TabularTransformer
+from research.models.tabular_transformer import TabularTransformer
 
 
 def load_config(path="research/config/config.yaml"):

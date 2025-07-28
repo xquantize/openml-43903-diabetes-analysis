@@ -3,9 +3,11 @@ data:
   path: data/raw/diabetes-130-hospitals_(fairlearn)_2025-07-23.csv
   test_size: 0.2
 model:
+  class: TabularTransformer
   d_model: 64
   dim_ff: 128
   dropout: 0.1
+  module: tabular_transformer
   n_heads: 4
   n_layers: 2
 training:

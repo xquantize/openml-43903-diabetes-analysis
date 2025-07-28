@@ -3,6 +3,8 @@ data:
   batch_size: 128
   test_size: 0.2
 model:
+  module: tabular_transformer
+  class: TabularTransformer
   d_model: 64
   n_heads: 4
   n_layers: 2
