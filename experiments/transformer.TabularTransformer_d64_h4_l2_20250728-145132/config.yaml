@@ -1,0 +1,14 @@
+data:
+  batch_size: 128
+  path: data/raw/diabetes-130-hospitals_(fairlearn)_2025-07-23.csv
+  test_size: 0.2
+model:
+  d_model: 64
+  dim_ff: 128
+  dropout: 0.1
+  n_heads: 4
+  n_layers: 2
+training:
+  epochs: 20
+  lr: 1e-4
+  pos_weight: 8.0
